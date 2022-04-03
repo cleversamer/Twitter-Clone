@@ -11,7 +11,7 @@ const App = () => {
 
       <Feed />
 
-      {/* <Widgets /> */}
+      <Widgets />
     </div>
   );
 };

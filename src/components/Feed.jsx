@@ -4,7 +4,9 @@ import "../css/feed.css";
 const Feed = () => {
   return (
     <div className="feed">
-      {/* Header */}
+      <header className="feed__header">
+        <h2 className="feed__heading">Home</h2>
+      </header>
 
       {/* Tweet Box */}
 
