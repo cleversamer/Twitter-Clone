@@ -17,7 +17,7 @@ import "../css/sidebar.css";
 const Sidebar = () => {
   return (
     <aside className="sidebar">
-      <Twitter />
+      <Twitter className="sidebar__twitter-icon" />
 
       <SidebarOption active Icon={Home} text="Home" />
       <SidebarOption Icon={Search} text="Explore" />

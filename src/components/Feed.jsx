@@ -4,7 +4,17 @@ import "../css/feed.css";
 const Feed = () => {
   return (
     <div className="feed">
-      <h1>Feed</h1>
+      {/* Header */}
+
+      {/* Tweet Box */}
+
+      {/* Post */}
+      {/* Post */}
+      {/* Post */}
+      {/* Post */}
+      {/* Post */}
+      {/* Post */}
+      {/* Post */}
     </div>
   );
 };
