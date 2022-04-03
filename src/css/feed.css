@@ -4,10 +4,17 @@
   min-width: fit-content;
   overflow-x: hidden;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
 }
 
 .feed__header {
   position: sticky;
+  background-color: #fff;
   top: 0;
   z-index: 100;
   border: 1px solid var(--twitter-background);
