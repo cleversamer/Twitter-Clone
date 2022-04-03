@@ -14,6 +14,9 @@ Twitter Clone with React & Firebase
 
 - React
 - React DOM
+- Firebase
+- MaterialUI
+- MaterialUI Icons
 
 ### Installing
 
