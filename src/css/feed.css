@@ -1,7 +1,6 @@
 .feed {
   flex: 0.5;
   border-right: 1px solid var(--twitter-background);
-  /* min-width: fit-content; */
   max-width: 50vw;
   overflow-x: hidden;
   overflow-y: auto;
@@ -19,4 +18,10 @@
 .feed__heading {
   font-size: 20px;
   font-weight: 800;
+}
+
+@media screen and (max-width: 1080px) {
+  .feed {
+    flex: 0.6;
+  }
 }

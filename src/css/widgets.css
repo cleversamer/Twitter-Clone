@@ -36,3 +36,9 @@
 .widgets__widget-container > h2 {
   text-align: center;
 }
+
+@media screen and (max-width: 1080px) {
+  .widgets {
+    flex: 0.4;
+  }
+}
