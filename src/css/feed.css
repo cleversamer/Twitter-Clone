@@ -25,3 +25,10 @@
     flex: 0.6;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .feed {
+    flex: 1;
+    max-width: 100vw;
+  }
+}
