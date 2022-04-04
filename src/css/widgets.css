@@ -32,3 +32,7 @@
   background-color: #f5f8fa;
   border-radius: 20px;
 }
+
+.widgets__widget-container > h2 {
+  text-align: center;
+}

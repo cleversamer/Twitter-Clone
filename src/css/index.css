@@ -7,6 +7,10 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  color: #333;
+}
+
 :root {
   --twitter-color: #50b7f5;
   --twitter-background: #e6ecf0;
