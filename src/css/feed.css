@@ -5,12 +5,6 @@
   max-width: 50vw;
   overflow-x: hidden;
   overflow-y: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.feed::-webkit-scrollbar {
-  display: none;
 }
 
 .feed__header {

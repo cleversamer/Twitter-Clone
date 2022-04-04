@@ -11,3 +11,12 @@ html {
   --twitter-color: #50b7f5;
   --twitter-background: #e6ecf0;
 }
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -17,6 +17,7 @@ Twitter Clone with React & Firebase
 - Firebase
 - MaterialUI
 - MaterialUI Icons
+- React Twitter Embed
 
 ### Installing
 

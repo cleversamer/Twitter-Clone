@@ -5,7 +5,7 @@ import "../css/feed.css";
 
 const Feed = () => {
   return (
-    <div className="feed">
+    <div className="feed no-scrollbar">
       <header className="feed__header">
         <h2 className="feed__heading">Home</h2>
       </header>
