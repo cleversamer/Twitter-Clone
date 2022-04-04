@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Avatar, IconButton } from "@mui/material";
 import {
   ChatBubbleOutline,
   FavoriteBorder,
+  Favorite,
   Publish,
   Repeat,
   Verified,
@@ -17,6 +18,8 @@ const Tweet = ({
   text,
   imageUrl,
 }) => {
+  const [isLiked, setLiked] = useState(false);
+
   return (
     <div className="tweet">
       <div className="tweet__avatar">
@@ -50,8 +53,12 @@ const Tweet = ({
             <Repeat fontSize="small" />
           </IconButton>
 
-          <IconButton>
-            <FavoriteBorder fontSize="small" />
+          <IconButton onClick={() => setLiked(!isLiked)}>
+            {isLiked ? (
+              <Favorite fontSize="small" />
+            ) : (
+              <FavoriteBorder fontSize="small" />
+            )}
           </IconButton>
 
           <IconButton>
