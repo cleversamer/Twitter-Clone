@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import db from "../firebase";
 import {
   TwitterTimelineEmbed,
   TwitterShareButton,
@@ -8,6 +9,24 @@ import { Search } from "@mui/icons-material";
 import "../css/widgets.css";
 
 const Widgets = () => {
+  const defaultWidgets = {
+    screenName: "ssadawi__",
+    sourceType: "profile",
+    tweetId: "1503052532779782145",
+    text: "#reactjs is awesome",
+    url: "https://facebook.com/samer.187",
+  };
+
+  const [widgets, setWidgets] = useState(defaultWidgets);
+
+  const { screenName, sourceType, tweetId, text, url } = widgets;
+
+  useEffect(() => {
+    db.collection("widgets").onSnapshot((snapshot) => {
+      setWidgets(snapshot.docs.map((doc) => ({ ...doc.data() }))[0]);
+    });
+  }, []);
+
   return (
     <div className="widgets no-scrollbar">
       <div className="widgets__input">
@@ -18,18 +37,15 @@ const Widgets = () => {
       <div className="widgets__widget-container">
         <h2>What's happening</h2>
 
-        <TwitterTweetEmbed tweetId="1503052532779782145" />
+        <TwitterTweetEmbed tweetId={tweetId} />
 
         <TwitterTimelineEmbed
-          sourceType="profile"
-          screenName="ssadawi__"
+          sourceType={sourceType}
+          screenName={screenName}
           options={{ height: 400 }}
         />
 
-        <TwitterShareButton
-          url="https://facebook.com/samer.187"
-          options={{ text: "#reactjs is awesome", via: "ssadawi__" }}
-        />
+        <TwitterShareButton url={url} options={{ text, via: "ssadawi__" }} />
       </div>
     </div>
   );
